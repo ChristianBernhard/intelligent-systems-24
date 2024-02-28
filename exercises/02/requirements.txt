@@ -1,0 +1,3 @@
+mcts
+gym[classic_control]
+numpy
