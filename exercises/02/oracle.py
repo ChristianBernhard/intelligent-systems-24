@@ -19,7 +19,9 @@ def oracle(actionSeq, n_calls=1000):
         if terminated or truncated:
             break
 
-    # TODO
+    if sumRewards > bestReward:
+        bestReward = sumRewards
+        bestActionSeq = actionSeq
 
     counter += 1
     if counter == 1:
@@ -29,7 +31,7 @@ def oracle(actionSeq, n_calls=1000):
         exit()
     print(counter, ": ", bestReward)
 
-    return -1 # TODO
+    return sumRewards
 
 
 def play():
