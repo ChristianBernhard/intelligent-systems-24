@@ -42,6 +42,8 @@ DBScan:
 
 ![img_46.png](img_46.png)
 
+Real use of archetypes: Personas
+
 
 
 
