@@ -51,4 +51,8 @@ All modifications to the initial round trip result in worse round trips
 ## Tabu Search
 - Local search method that takes "history" into account when creating new individuals
 - Taboo lists prevent a return to the solution candidates just considered (they are “tabu” :) )
-- 
+
+## Key takeaways
+![img_51.png](img_51.png)
+
+![img_52.png](img_52.png)

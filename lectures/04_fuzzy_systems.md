@@ -24,3 +24,5 @@ Example
 
 ![img_34.png](img_34.png)
 
+## Key takeaways
+![img_50.png](img_50.png)

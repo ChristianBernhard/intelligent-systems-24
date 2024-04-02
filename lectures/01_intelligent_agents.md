@@ -77,3 +77,6 @@ Name the States, the Actions, the Target test and the Path cost in this image:
 
 Name the States, the Actions, the Target test and the Path cost in this image:
 ![img_14.png](img_14.png)
+
+## Key Takeways
+![img_54.png](img_54.png)
