@@ -44,9 +44,11 @@ DBScan:
 
 Real use of archetypes: Personas
 
-
-
-
-
+## Archetypal Algorithm
+- Algorithm converges, but not necessarily in the global minimum
+=> different initializations
+- No rule for correct number of archetypes �
+=> Elbow criterion
+![img_48.png](img_48.png)
 
 
