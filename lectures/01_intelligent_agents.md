@@ -41,6 +41,9 @@ Goal-Oriented Agent
 Benefit-oriented (utility) agent
 ![img_7.png](img_7.png)
 
+![img_63.png](img_63.png)
+
+
 **What are the 2 steps between sensor input and action output?**
 ![img_8.png](img_8.png)
 
