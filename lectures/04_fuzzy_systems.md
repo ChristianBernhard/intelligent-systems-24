@@ -26,3 +26,8 @@ Example
 
 ## Key takeaways
 ![img_50.png](img_50.png)
+
+![img_81.png](img_81.png)
+
+![img_82.png](img_82.png)
+

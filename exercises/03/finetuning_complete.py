@@ -16,20 +16,20 @@ def test_model(model, tokenizer):
     inputs = tokenizer(text, return_tensors="pt") # we want a pytorch tensor
     token_logits = model(**inputs).logits # what are logits? raw output, before applying softmax
     # predict an output for each input. If not masked -> input = output.
-    #print(inputs["input_ids"]) # insert special charaters for start and end. Replace the
-    #print(token_logits.shape)
-    #exit()
+    print(inputs["input_ids"]) # insert special charaters for start and end. Replace the
+    print(token_logits.shape)
+    # exit()
 
     # Find the location of [MASK] and extract its logits
     mask_token_index = torch.where(inputs["input_ids"] == tokenizer.mask_token_id)[1]
     mask_token_logits = token_logits[0, mask_token_index, :]
-    #print(mask_token_index)
-    #print(mask_token_logits.shape)
+    print(mask_token_index)
+    print(mask_token_logits.shape)
     #exit()
 
     # Pick the [MASK] candidates with the highest logits
     top_5_tokens = torch.topk(mask_token_logits, 5, dim=1).indices[0].tolist()
-    #print(top_5_tokens) # highest values in the logit represent the likliest predictions
+    print(top_5_tokens) # highest values in the logit represent the likliest predictions
     for token in top_5_tokens:
         print(f"'>>> {text.replace(tokenizer.mask_token, tokenizer.decode([token]))}'") # token+1
     print()

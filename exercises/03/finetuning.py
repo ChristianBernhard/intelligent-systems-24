@@ -13,6 +13,8 @@ def test_model(model, tokenizer):
     text = "This is a great [MASK]."
 
     # TODO: tokenize the text
+    inputs = tokenizer(text, return_tensors="pt") # we want a pytorch tensor
+    print(inputs)
     # TODO: predict the logits for each input token
 
     # TODO: Find the location of [MASK] and extract its logits
@@ -35,7 +37,8 @@ def group_texts(examples):
 ###########################
 
 model_checkpoint = "distilbert-base-uncased"
-
+model = AutoModelForMaskedLM.from_pretrained(model_checkpoint)
+tokenizer = AutoTokenizer.from_pretrained(model_checkpoint) # can someone tell me what a tokenizer is?
 # TODO: load the distilBERT model and its tokenizer
 
 distilbert_num_parameters = model.num_parameters() / 1_000_000
@@ -53,6 +56,7 @@ test_model(model, tokenizer)
 ###########################
 
 # TODO: load the IMDB film review dataset
+imdb_dataset = load_dataset("imdb")
 
 print(">>> IMDB Dataset structure:\n", imdb_dataset, "\n")
 sample = imdb_dataset["train"].shuffle(seed=42).select(range(1))
@@ -74,13 +78,28 @@ def tokenize_function(examples):
     return result
 
 # TODO: tokenize the dataset
+tokenized_datasets = imdb_dataset.map(tokenize_function, batched=True, remove_columns=["text", "label"]) # tokenize the dataset (25_000 reviews)
+
 
 chunk_size = 128
 lm_datasets = tokenized_datasets.map(group_texts, batched=True)
 data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
 
 # TODO: print the first sample of the masked corpus
-
+print(lm_datasets) # 61_000 chunks, each containing 128 tokens
+print("Masked corpus:")
+sample = lm_datasets["train"][0] # sample = first chunk (128 tokens) in "input_ids"
+sample.pop("word_ids")
+chunk = torch.tensor(sample["input_ids"])
+chunk_masked = data_collator([sample])["input_ids"][0]
+print(chunk)
+print(chunk.shape)
+print(chunk_masked)
+print(chunk_masked.shape)
+print(f"\n'>>> {tokenizer.decode(chunk)}'") # what is a chunk? tensor, containing 128 integers. Decode it using the tokenizer
+print(f"\n'>>> {tokenizer.decode(chunk_masked)}'")
+print()
+exit()
 
 
 ###########################
@@ -124,7 +143,12 @@ eval_results = trainer.evaluate()
 print(f">>> Perplexity: {math.exp(eval_results['eval_loss']):.2f}")
 
 # TODO: fine-tune the model
+for epoch in range(1):
+    trainer.train()
+    eval_results = trainer.evaluate()
+    print(f">>> Perplexity: {math.exp(eval_results['eval_loss']):.2f}")
 
 # TODO: model is at cuda. Move it to cpu
+model.to("cpu")
 
 test_model(model, tokenizer)

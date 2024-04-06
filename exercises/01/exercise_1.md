@@ -32,20 +32,7 @@ Not Intelligent
 (c) Justify why it makes sense to formulate a problem after formulating the goal.
 
 (d)
-State space: all possible configurations an agent could be in
-always true? Not for continous state spaces
-
-State: the configuration of the agent at a certain time
-
-Search tree: 
-
-Goal: what the agent wants to achieve
-
-Action: the moves an agent can do to get from one state into another
- 
-Successor function: in which state we get into another state
-
-Branching factor:
+![img.png](img.png)
 
 ## Exercise 2 - Problem Formulation and Heuristics
 (a) 

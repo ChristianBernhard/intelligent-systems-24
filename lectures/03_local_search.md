@@ -56,3 +56,18 @@ All modifications to the initial round trip result in worse round trips
 ![img_51.png](img_51.png)
 
 ![img_52.png](img_52.png)
+
+
+The primary difference between tree search and graph search lies in how they handle repeated states:
+
+Tree Search:
+
+Treats each node as unique, even if the states they represent have been encountered before.
+Can potentially explore redundant paths or go in circles if the state space has loops.
+Graph Search:
+
+Keeps track of all the states it has already explored in a list (often called "closed set" or "explored set").
+
+![img_73.png](img_73.png)
+
+![img_74.png](img_74.png)

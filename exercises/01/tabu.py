@@ -4,10 +4,10 @@ import numpy as np
 N = 50
 max_strength = 10_000 # test: 10 and 10_000
 
+
 numbers = np.random.choice(range(max_strength), size=N, replace=True)
 def oracle(x):
     return -np.abs( np.dot(numbers, x) - np.dot(numbers, (1 - x)) )
-
 
 def tabu(oracle):
 

@@ -2,6 +2,9 @@
 Fill out the grapic
 ![img.png](img_15.png)
 
+
+
+
 What is Self-CHOP:
 Autonomous ssstems operate without human intervention using:
 - Configuration
@@ -9,23 +12,29 @@ Autonomous ssstems operate without human intervention using:
 - optimization
 - protection
 
+Autonomous systems
+• ...operate without human intervention using Self-CHOP
+
 Rational Agents: do the right thing based on the information available
-agent: is a function that maps the sequence of perception to actions
+
 Artificial intelligence: includes the processes of thinking, acting and learning
 
 
-Strategies are evaluated according to the following dimensions:
-• Completeness: Always finds a solution when it exists?
-• Time Complexity: Number of generated/expanded nodes
-• Memory complexity: maximum number of nodes in memory
-• Optimality: always finds the most cost-effective solution?
+state vs node:
+- state: is a physical configuration
+- node: is a data structure that is part of a search tree
+a node includes:  Includes predecessors, possibly children, depth �(�) and path costs �(�
+- a state doesnt have that
+![img_72.png](img_72.png)
 
-Time and memory complexity are measured using
-• � – Maximum level of branching of the search tree
-• � - Depth of Least Cost Solution
-• � – maximum depth of state space (can be ∞)
+the expand function:
+- creates new nodes; fills in fields, and uses the problem successor function to create corresponding stats 
+![img_71.png](img_71.png)
+
 
 ![img_18.png](img_18.png)
+
+![img_69.png](img_69.png)
 
 What are uninformed strategies? Name 5:
 Uninformed strategies use only the information available in the problem definition
@@ -34,6 +43,8 @@ Uninformed strategies use only the information available in the problem definiti
 • Depth-first search
 • Depth-limited search
 • Iterative deepening depth-first search
+
+**look them up here**
 
 Breadth-First Search:
 ![img_20.png](img_20.png)
@@ -63,7 +74,8 @@ closest to the target
 A*:
 ![img_24.png](img_24.png)
 
-Monotony and Admissibility
+**Monotony and Admissibility**
+look here as well
 
 Dominance and Relaxation:
 ![img_25.png](img_25.png)
@@ -71,3 +83,14 @@ Dominance and Relaxation:
 
 ## Key Takeaways
 ![img_53.png](img_53.png)
+
+
+![img_80.png](img_80.png)
+![img_75.png](img_75.png)
+
+
+![img_79.png](img_79.png)
+![img_76.png](img_76.png)
+
+![img_78.png](img_78.png)
+![img_77.png](img_77.png)

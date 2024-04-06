@@ -52,3 +52,7 @@ Real use of archetypes: Personas
 ![img_48.png](img_48.png)
 
 
+![img_83.png](img_83.png)
+
+Elbow criteria: Golden Middle.K small as possible, with fewest outliers as possible.
+![img_84.png](img_84.png)

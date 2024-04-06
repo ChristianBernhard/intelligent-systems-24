@@ -1,6 +1,7 @@
 # VL 1 - Intelligent Systems
 
 ![img_1.png](img_1.png)
+
 **What does PEAS stand for? Why need it?**
 In order to design a rational agent, the task must be specified
 - Performance Measures 
@@ -47,22 +48,8 @@ Benefit-oriented (utility) agent
 **What are the 2 steps between sensor input and action output?**
 ![img_8.png](img_8.png)
 
-Name 4 Types of Problems:
-Single state problem (Deterministic, fully observable):
-- Agent knows exactly what state he will be in
-- Solution is sequence
+![img_64.png](img_64.png)
 
-Conformant Problem (Non-observable):
-- Lack of observability can cause uncertainty at baseline and mean in effects of actions
-- Solution (if any) is sequence
-
-Contingency problem (nondeterminism. and/or partially observable):
-- Perception provides new information about the current state
-- Solution is contingency plan or guideline (policy)
-- Search and execution are often intertwined
-
-Exploration problem (Unknown state space)
-- "Online"
 
 Name the Type of Problem that is depicted in the image and say why:
 ![img_9.png](img_9.png)
@@ -80,6 +67,14 @@ Name the States, the Actions, the Target test and the Path cost in this image:
 
 Name the States, the Actions, the Target test and the Path cost in this image:
 ![img_14.png](img_14.png)
+
+![img_65.png](img_65.png)
+
+![img_66.png](img_66.png)
+
+![img_67.png](img_67.png)
+
+![img_68.png](img_68.png)
 
 ## Key Takeways
 ![img_54.png](img_54.png)
