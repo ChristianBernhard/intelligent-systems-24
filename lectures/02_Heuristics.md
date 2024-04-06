@@ -27,6 +27,8 @@ a node includes:  Includes predecessors, possibly children, depth �(�) and p
 - a state doesnt have that
 ![img_72.png](img_72.png)
 
+![img_88.png](img_88.png)
+
 the expand function:
 - creates new nodes; fills in fields, and uses the problem successor function to create corresponding stats 
 ![img_71.png](img_71.png)
