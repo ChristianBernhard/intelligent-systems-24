@@ -12,11 +12,7 @@ In order to design a rational agent, the task must be specified
 **Examples for autonomous vehicle and bargain hunter:**
 ![img_2.png](img_2.png)
 
-**Name 4 Types of Environment:**
-- Fully Observable vs. Partially Observable
-- Deterministic vs. Stochastic
-- Episodic vs. Sequential
-- Single Agent vs. Multi agent
+![img_87.png](img_87.png)
 
 **Classify the types of enviroments for autonomous vehicle and bargain hunter:**
 ![img_3.png](img_3.png)
