@@ -56,6 +56,9 @@ Strategy: Expand the least expensive non-expanded node
 DFS:
 ![img_21.png](img_21.png)
 
+DFS: Stack
+BFS: queue
+
 Constrained DFS:
 - Basically, it is imposing a limit on the depth that DFS  can reach. The limit l solves  the infinite p
 - Strategy: Expand the deepest, non-expanded node, where nodes of depth � have no children

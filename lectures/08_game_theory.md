@@ -35,6 +35,10 @@ Check example: is this a nash equilibrium
 ![img_61.png](img_61.png)
 ![img_62.png](img_62.png)
 
+- Eine Strategie dominiert eine andere streng (oder strikt), wenn die Auszahlungen in jedem möglichen Szenario für die dominierende Strategie höher sind als die der anderen Strategie
+- Eine Strategie dominiert eine andere schwach, wenn die Auszahlungen in einigen Szenarien gleich sind und in anderen die dominierende Strategie besser ist, aber nie schlechter.
 
+![img_85.png](img_85.png)
 
+![img_86.png](img_86.png)
 
